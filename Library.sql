@@ -258,20 +258,26 @@ create table Library_Branch
 	[Address] varchar(75) NOT NULL
 )
 
+/*Adding data to library branch table*/
 INSERT INTO Library_Branch
 values  (1, 'Sharpstown', '3214 NE Bullseye Rd'),
 		(2, 'Central', '8392 SW Pardped Ave'),
-		(3, 'Azura', '2019 W Waifu Way'),
+		(3, 'Solar', '2019 W Quasar Way'),
 		(4, 'Gallant', '9821 SE Pegasus Pkwy')
 
 /*Borrower Table*/
 create table Borrower
 (
-	CardNo int PRIMARY KEY NOT NULL,
+	Borrower_id int PRIMARY KEY,
+	CardNo varchar(30) NOT NULL,
 	Name varchar(40) NOT NULL,
 	[Address] varchar(75) NOT NULL,
 	Phone varchar(25) NOT NULL
 )
 
+INSERT INTO Borrower
+values  (1, '1927463332', '3214 NE Bullseye Rd'),
+
+
 select * 
-from Book_Loans
+from Book_Copies
