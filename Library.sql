@@ -275,9 +275,18 @@ create table Borrower
 	Phone varchar(25) NOT NULL
 )
 
+/*Inserting Borrowers*/
 INSERT INTO Borrower
-values  (1, '1927463332', '3214 NE Bullseye Rd'),
+values  (1, '1927463332', 'Lui Mircado', '984 E Azure Ave', '921-399-7329'),
+		(2, '9383220100', 'Mayra Hermana', '555 NE Indigo Blvd', '201-283-8888'),
+		(3, '5555331112', 'Michael Xu', '888 SE Nebula Ct', '778-829-8888'),
+		(4, '4209000033', 'Aidan Jorsen', '764 NW Tammy Dr', '778-829-8888'),
+		(5, '8290003288', 'Stephanie Yu', '8124 SE Trendsetter Vista Ave', '778-829-8888'),
 
+
+		(6, '7472291932', 'Jak Drumpf', '188 Nowhere Ct', '778-829-8888'),
+		(7, '6444932018', 'Donald Bannon', '444 Apocalypse Dr', '778-829-8888'),
+		(8, '3232211333', 'Elise Tang', '201 Emblem Way', '778-829-8888')
 
 select * 
 from Book_Copies
