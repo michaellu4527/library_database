@@ -35,7 +35,7 @@ values (1, 'Stephen King'),
 		(17, 'Harper Lee'),
 		(18, 'George Orwell'),
 		(19, 'Mary Shelley'),
-		(20, 'Maya Angelou')
+		(20, 'John Oliver')
 
 
 /*Book table*/
@@ -258,6 +258,11 @@ create table Library_Branch
 	[Address] varchar(75) NOT NULL
 )
 
+INSERT INTO Library_Branch
+values  (1, 'Sharpstown', '3214 NE Bullseye Rd'),
+		(2, 'Central', '8392 SW Pardped Ave'),
+		(3, 'Azura', '2019 W Waifu Way'),
+		(4, 'Gallant', '9821 SE Pegasus Pkwy')
 
 /*Borrower Table*/
 create table Borrower
