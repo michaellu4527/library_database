@@ -44,10 +44,10 @@ where bl.DueDate = '11/18/2016' AND lb.Branch_id = 1
 
 /*Question 5*/
 
-select lb.BranchName, bc.No_of_copies, count(*) as total_no_of_copies 
-from Book_Copies as bc INNER JOIN Library_Branch as lb
-ON lb.Branch_id = bc.Branch_id
-GROUP BY lb.BranchName, bc.No_of_copies
+select lb.BranchName, count(*) as Total_books_checked_out
+from Book_Loans as bl INNER JOIN Library_Branch as lb
+ON bl.Branch_id = lb.Branch_id
+GROUP BY BranchName
 
 
 /*Question 6*/
@@ -74,12 +74,19 @@ where ba.AuthorName = 'Stephen King' AND bc.Branch_id = 2
 
 
 /*Stored Procedure for alternate version of question 7*/
-alter proc GetBookAvailability @Author varchar(40), @Branch int
+alter proc GetBookAvailability @Author varchar(40), @Branch varchar(40)
 AS
-	select * 
-	from Book_Authors as ba INNER JOIN Book_Copies as bc
-	ON ba.Book_id = bc.Book_id
-	where ba.AuthorName LIKE @Author + '%' AND bc.Branch_id = @Branch 
+	select b.Title, ba.AuthorName, lb.BranchName, bc.No_of_copies 
+	from Book_Copies as bc INNER JOIN Book as b
+	ON b.Book_id = bc.Book_id
 
-EXEC GetBookAvailability 'm', 2
+	INNER JOIN Book_Authors as ba
+	ON ba.Book_id = b.Book_id
+
+	INNER JOIN Library_Branch as lb
+	ON bc.Branch_id = lb.Branch_id
+	where ba.AuthorName LIKE @Author + '%' AND lb.BranchName LIKE @Branch + '%'
+
+EXEC GetBookAvailability 'm', 'Az'
+
 
