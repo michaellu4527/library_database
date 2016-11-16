@@ -35,7 +35,7 @@ values (1, 'Stephen King'),
 		(17, 'Harper Lee'),
 		(18, 'George Orwell'),
 		(19, 'Mary Shelley'),
-		(20, 'John Oliver')
+		(20, 'Oliver Twist')
 
 
 /*Book table*/
@@ -57,7 +57,7 @@ values (1, 'The Lost Tribe', 'Smith Inc.'),
 		(7, 'Lui Homes', 'Legend Books'),
 		(8, 'World Domination', 'Mandrake Press'),
 		(9, 'The Art of DMS', 'Mandrake Press'),
-		(10, '1969', 'Goodman Publishing'),
+		(10, '1984', 'Goodman Publishing'),
 
 		(11, 'Animal Farm', 'Legend Books'),
 		(12, 'Fahrenheit 451', 'Grafton Press'),
@@ -133,7 +133,7 @@ values (1, 1, 1, 4),
 		(11, 2, 2, 3),
 		(12, 3, 2, 2),
 		(13, 4, 2, 9),
-		(14, 15, 2, 22),
+		(14, 1, 2, 22),
 		(15, 5, 2, 3),
 
 		(16, 6, 2, 8),
@@ -290,5 +290,3 @@ values  (1, '1927463332', 'Lui Mircado', '984 E Azure Ave', '921-399-7329'),
 		(9, '5344522244', 'Oregon John', '9821 Stanley Cir', '871-723-2212'),
 		(10, '2256267942', 'Grape Apple', '4234 Vineyard Dr', '222-881-4723')
 		
-select * 
-from Borrower
